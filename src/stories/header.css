@@ -13,12 +13,12 @@
 }
 
 .storybook-header h1 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1;
-  margin: 6px 0 6px 10px;
-  display: inline-block;
-  vertical-align: top;
+  /* font-weight: 700; */
+  /* font-size: 20px; */
+  /* line-height: 1; --> changed to 1.75rem*/
+  /* margin: 6px 0 6px 10px; --> changed to 8 0 8 12*/
+  /* display: inline-block; */
+  /* vertical-align: top; */
 }
 
 .storybook-header button + button {
