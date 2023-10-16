@@ -1,19 +1,17 @@
-import React from "react";
-import "./button.css";
+import clsx from "clsx";
+
+type ButtonVariant = "primary" | "secondary";
+type Size = "small" | "medium" | "large";
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
+  variant?: ButtonVariant;
   /**
    * How large should the button be?
    */
-  size?: "small" | "medium" | "large";
+  size?: Size;
   /**
    * Button contents
    */
@@ -24,29 +22,26 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
-  primary = false,
+  variant = "secondary",
   size = "medium",
-  backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
-  return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
+}: ButtonProps) => (
+  <button
+    type="button"
+    className={clsx(
+      "inline-block min-w-[170px] cursor-pointer border-0 p-4 font-sans text-xs font-bold uppercase leading-none",
+      {
+        "bg-secondary text-black-2": variant === "secondary",
+        "bg-primary text-white": variant === "primary",
+        "px-3 py-2 text-sm": size === "small",
+        "px-5 py-3 text-base": size === "medium",
+        "px-6 py-4 text-lg": size === "large",
+      },
+    )}
+    {...props}
+  >
+    {label}
+  </button>
+);

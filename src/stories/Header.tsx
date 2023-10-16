@@ -4,10 +4,10 @@ interface HeaderProps {
 
 export const Header = ({ title }: HeaderProps) => (
   <header>
-    <div className="bg-green-600">
+    <div className="border-black flex items-center justify-between border border-opacity-10 px-5 py-3 font-sans shadow-md">
       <div>
         {title && (
-          <h1 className=" bg-red-500 font-bold text-xl my-2 ml-3 inline-block align-top">
+          <h1 className="my-2 ml-3 inline-block align-top text-2xl font-bold">
             {title}
           </h1>
         )}
