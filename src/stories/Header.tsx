@@ -1,17 +1,15 @@
 import { ReactNode } from "react";
 import { Container } from "./Container";
 import { LanguageSelector } from "./LanguageSelector";
+import { langs } from "../i18n";
 
 interface HeaderProps {
   title: string;
   rightAlignedComponent?: ReactNode;
 }
 
-//  Move this somewhere else, maybe to i18n file
-const langs = ["en", "pt", "jp"];
-
 export const Header = ({ title, rightAlignedComponent }: HeaderProps) => (
-  <header className="flex justify-center border border-b-black-1 border-opacity-10 px-5 pb-1 pt-3 font-sans shadow-md">
+  <header className="flex justify-center border border-b-black-1 border-opacity-10 px-5 pb-2 pt-4 font-sans shadow-md">
     <div className="flex w-fit w-screen max-w-7xl justify-center">
       <Container>
         <div className=" mr-20 flex items-center justify-between">

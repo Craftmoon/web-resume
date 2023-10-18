@@ -1,7 +1,5 @@
 import { LinkButton } from "./LinkButton";
 import { useTranslation } from "react-i18next";
-import translationIcon from "../assets/translation-icon.svg"; // Adjust the path based on your project structure
-import ptIcon from "../assets/icon-pt.png";
 
 export const Menu = () => {
   const { t } = useTranslation();
@@ -43,11 +41,6 @@ export const Menu = () => {
         }}
         className="ml-8"
       />
-      {/* <img
-        src={translationIcon}
-        className=" ml-8 h-6 w-6"
-        alt="translation icon"
-      /> */}
     </div>
   );
 };
