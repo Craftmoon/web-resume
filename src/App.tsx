@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { Header } from "./stories/Header";
-import { Menu } from "./stories/Menu";
+import { Header } from "./components/Header";
+import { Menu } from "./components/Menu";
 
 function App() {
   const { i18n } = useTranslation();
 
   return (
     <>
-      <Header title="Vitor." rightAlignedComponent={<Menu />} />
+      <Header title="Vitor." menu={<Menu />} languageSelector />
       <div>content</div>
       <button
         onClick={() => {

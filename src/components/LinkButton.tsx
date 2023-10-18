@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 interface ButtonProps {
   label: string;
-  className: string;
+  className?: string;
   onClick?: () => void;
 }
 

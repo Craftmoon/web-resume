@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { LanguageSelector } from "./LanguageSelector";
+import { LanguageSelector } from "../components/LanguageSelector";
 import { langs } from "../i18n";
 
 const meta = {
