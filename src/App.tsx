@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Header title="Vitor." menu={<Menu />} languageSelector />
+      <Header title="Vitor." menu={<Menu languageSelector />} />
       <div>content</div>
       <button
         onClick={() => {

@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Header } from "../components/Header";
 import { Menu } from "../components/Menu";
-import { langs } from "../i18n";
-import { LanguageSelector } from "../components/LanguageSelector";
 
 const meta = {
   title: "Example/Header",
@@ -26,14 +24,5 @@ export const WithMenu: Story = {
   args: {
     title: "Vitor.",
     menu: <Menu />,
-    languageSelector: false,
-  },
-};
-
-export const WithMenuAndLanguageSelector: Story = {
-  args: {
-    title: "Vitor.",
-    menu: <Menu />,
-    languageSelector: true,
   },
 };
