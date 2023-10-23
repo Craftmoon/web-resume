@@ -10,7 +10,7 @@ export const LinkButton = ({ label, className, ...props }: ButtonProps) => {
   return (
     <a
       className={clsx(
-        "inline-block cursor-pointer font-sans text-xs font-bold uppercase leading-none transition-all duration-300 hover:text-primary hover:underline",
+        "font-title inline-block cursor-pointer text-xs font-bold uppercase leading-none transition-all duration-300 hover:text-primary hover:underline",
         className,
       )}
       {...props}

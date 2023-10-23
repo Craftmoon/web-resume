@@ -20,18 +20,21 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+
+  className?: string;
 }
 
 export const Button = ({
   variant = "secondary",
   size = "medium",
   label,
+  className,
   ...props
 }: ButtonProps) => (
   <button
     type="button"
     className={clsx(
-      "inline-block min-w-[170px] cursor-pointer border-0 p-4 font-sans text-xs font-bold uppercase leading-none",
+      "font-title inline-block min-w-[170px] cursor-pointer border-0 p-4 text-xs font-bold uppercase leading-none",
       {
         "bg-secondary text-black-2": variant === "secondary",
         "bg-primary text-white": variant === "primary",
@@ -39,6 +42,7 @@ export const Button = ({
         "px-5 py-3 text-base": size === "medium",
         "px-6 py-4 text-lg": size === "large",
       },
+      className,
     )}
     {...props}
   >

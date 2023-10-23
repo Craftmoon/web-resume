@@ -5,13 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          "Nunito Sans",
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
+        title: ["Lato", "sans-serif"],
+        text: ["Roboto", "sans-serif"],
       },
       colors: {
         primary: "#007FFF",
